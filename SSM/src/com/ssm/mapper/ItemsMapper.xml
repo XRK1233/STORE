@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ssm.mapper.ItemsMapper">
+	<select id="getAllItems" resultType="com.ssm.pojo.Items">
+		select *  from Items;
+	</select>
+	<!-- 根据id查询商品名 -->
+	<select id="getItemsById" parameterType="int" resultType="com.ssm.pojo.Items">
+		select * from items where id=#{id}
+	</select>
+</mapper>
